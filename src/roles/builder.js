@@ -23,4 +23,4 @@ const run = creep => {
   }
 }
 
-export const builder = { run }
+export const builder = run

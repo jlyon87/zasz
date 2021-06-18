@@ -19,4 +19,4 @@ const run = creep => {
   }
 }
 
-export const harvester = {run}
+export const harvester = run

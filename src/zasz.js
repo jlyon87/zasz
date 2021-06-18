@@ -1,7 +1,7 @@
-import * as creepGen from './creep.generator'
+import { createHarvester } from './creep.generator'
 import { builder, harvester, upgrader } from './roles'
 
-const loop = () => {
+export const loop = () => {
   for (const name in Game.creeps) {
     const creep = Game.creeps[name]
     if (creep.memory.role === 'harvester') {
@@ -16,7 +16,11 @@ const loop = () => {
   }
 
   const energy = Game.spawns.Zasz.energy
-  console.log('energy', energy)
-}
+  if (energy % 50 === 0) {
+    console.log('⚡ energy', energy)
+  }
 
-export default loop
+  if (energy >= 250) {
+    createHarvester();
+  }
+}

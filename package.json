@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "copy": "cp dist/main.js '/Users/justin.lyon/Library/Application Support/Screeps/scripts/127_0_0_1___21025/default'",
+    "copy": "cp dist/main.js '/Users/justin.lyon/Library/Application Support/Screeps/scripts/127_0_0_1___21025/default/'",
     "deploy": "npm run build && npm run copy"
   },
   "repository": {

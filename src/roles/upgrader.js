@@ -20,4 +20,4 @@ const run = creep => {
   }
 }
 
-export const upgrader = { run}
+export const upgrader = run

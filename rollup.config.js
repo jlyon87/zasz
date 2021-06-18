@@ -8,7 +8,8 @@ export default [
     output: {
       name: 'howLongUntilLunch',
       file: 'dist/main.js',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: false
     },
     plugins: [
       resolve(), // so Rollup can find `ms`
