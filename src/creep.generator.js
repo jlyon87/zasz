@@ -1,4 +1,4 @@
-import { uuid as getUuid } from './utils'
+import { getUuid } from './utils'
 
 const BUILDER = 'builder'
 const HARVESTER = 'harvester'
@@ -24,7 +24,7 @@ const upgraderMemory = {
 
 const createCreep = (body, memory) => {
   const uuid = getUuid()
-  Game.spawns['Pekkerwood'].spawnCreep(
+  Game.spawns.Pekkerwood.spawnCreep(
     body,
     uuid,
     { memory: memory });
