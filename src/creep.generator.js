@@ -24,7 +24,7 @@ const upgraderMemory = {
 
 const createCreep = (body, memory) => {
   const uuid = getUuid()
-  Game.spawns.Pekkerwood.spawnCreep(
+  Game.spawns.Zasz.spawnCreep(
     body,
     uuid,
     { memory: memory });

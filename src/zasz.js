@@ -15,7 +15,7 @@ const loop = () => {
     }
   }
 
-  const energy = Game.spawns.Pekkerwood.energy
+  const energy = Game.spawns.Zasz.energy
   console.log('energy', energy)
 }
 
