@@ -1,0 +1,19 @@
+{
+  "env": {
+      "screeps/screeps": true,
+      "es2021": true
+  },
+  "plugins": [
+    "screeps"
+  ],
+  "extends": [
+      "standard",
+      "prettier"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+  },
+  "rules": {
+  }
+}

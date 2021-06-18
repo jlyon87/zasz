@@ -4,7 +4,9 @@
   "description": "A Screeps Cerebrate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "copy": "cp dist/main.js '/Users/justin.lyon/Library/Application Support/Screeps/scripts/127_0_0_1___21025/default'",
+    "deploy": "npm run build && npm run copy"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,18 @@
   "bugs": {
     "url": "https://github.com/jlyon87/zasz/issues"
   },
-  "homepage": "https://github.com/jlyon87/zasz#readme"
+  "homepage": "https://github.com/jlyon87/zasz#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-screeps": "^2.1.0",
+    "prettier": "^2.3.1",
+    "rollup": "^2.52.1"
+  }
 }
