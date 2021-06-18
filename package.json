@@ -1,0 +1,26 @@
+{
+  "name": "zasz",
+  "version": "1.0.0",
+  "description": "A Screeps Cerebrate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlyon87/zasz.git"
+  },
+  "keywords": [
+    "screeps",
+    "zerg",
+    "cerebrate",
+    "rollup",
+    "esm"
+  ],
+  "author": "jlyon87",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlyon87/zasz/issues"
+  },
+  "homepage": "https://github.com/jlyon87/zasz#readme"
+}
