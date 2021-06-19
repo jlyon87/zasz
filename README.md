@@ -10,6 +10,7 @@ This repository is my AI for playing Screeps.
 ## Features
 
 1. [Rollup](https://rollupjs.org/guide/en/) Build
-    * This allows me to build my AI using ES Modules, then build it into a main.js and cp into the game directory. Copy command is not windows friendly.
+    * This allows me to build my AI using ES Modules, then build it into a main.js and cp into the game directory.
+    * Copy command is not windows friendly.
 2. Screeps compatible [eslint](https://eslint.org/) and [prettier](https://prettier.io/)
     * Uses [eslint-plugin-screeps](https://www.npmjs.com/package/eslint-plugin-screeps) to add the Screeps API and all its globals to the linter.
