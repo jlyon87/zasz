@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rollup -c",
     "copy": "cp dist/main.js '/Users/justin.lyon/Library/Application Support/Screeps/scripts/127_0_0_1___21025/default/'",
-    "deploy": "npm run build && npm run copy"
+    "deploy": "npm run build && npm run copy",
+    "lint": "eslint src --quiet --fix && prettier --write ."
   },
   "repository": {
     "type": "git",

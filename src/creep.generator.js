@@ -4,7 +4,7 @@ const BUILDER = 'builder'
 const HARVESTER = 'harvester'
 const UPGRADER = 'upgrader'
 
-const basicBody = [ WORK, WORK, CARRY, MOVE ]
+const basicBody = [WORK, WORK, CARRY, MOVE]
 
 const builderMemory = {
   role: BUILDER,
@@ -24,10 +24,7 @@ const upgraderMemory = {
 
 const createCreep = (body, memory) => {
   const uuid = getUuid()
-  Game.spawns.Zasz.spawnCreep(
-    body,
-    uuid,
-    { memory: memory });
+  Game.spawns.Zasz.spawnCreep(body, uuid, { memory: memory })
 }
 
 export const createBuilder = () => {

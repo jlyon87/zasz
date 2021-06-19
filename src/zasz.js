@@ -21,6 +21,6 @@ export const loop = () => {
   }
 
   if (energy >= 250) {
-    createHarvester();
+    createHarvester()
   }
 }

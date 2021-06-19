@@ -1,17 +1,18 @@
 const ignoreSources = ['15ea4b69eaffd56d47c98d61']
 
 const getRoomSources = () => {
-  return Game.spawns['Zasz'].room.find(FIND_SOURCES)
+  return Game.spawns.Zasz.room
+    .find(FIND_SOURCES)
     .filter(src => !ignoreSources.includes(src.id))
     .map(src => src.id)
 }
 
 const getEnergy = () => {
-  console.log('Energy: ', Game.spawns['Zasz'].energy)
+  console.log('Energy: ', Game.spawns.Zasz.energy)
 }
 
 const assignHarvester = (spawnName, sourceId, harvesterId) => {
-  const spawn = Game.spawns[spawnName].memory;
+  const spawn = Game.spawns[spawnName].memory
   Game.creeps[harvesterId].memory.sourceId = sourceId
   const assigned = spawn.sources.assigned[sourceId]
   const available = Game.spawns[spawnName].memory.sources.available
