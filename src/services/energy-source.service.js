@@ -1,5 +1,10 @@
 const getFilterByRoomName = roomName => {
-  return creep => !!creep.room && creep.room.name === roomName && !!creep.memory.sourceId
+  return creep => {
+    return creep.memory
+    && creep.memory.role === 'harvester'
+    && !!creep.room && creep.room.name === roomName
+    && !!creep.memory.sourceId
+  }
 }
 
 const transformSourceToItems = (acc, [key, value]) => {
@@ -12,17 +17,22 @@ const sortByCount = (a, b) => {
   return a.count > b.count ? 1 : -1
 }
 
-export const countByRoom = roomName => {
-  return Memory.rooms[roomName].find(FIND_SOURCES).length
+export const countByRoom = room => {
+  return room.find(FIND_SOURCES).length
 }
 
-export const findOne = roomName => {
+export const getAll = room => {
+  return room
+  .find(FIND_SOURCES)
+}
+
+export const findOne = room => {
   // find one that is in the room and not assigned to other creeps in the room
   const assignedSources = Object.entries(Memory.creeps)
-    .filter(getFilterByRoomName(roomName))
+    .filter(getFilterByRoomName(room.name))
     .map(creep => creep.memory.sourceId)
 
-  const sources = Memory.rooms[roomName]
+  const sources = room
     .find(FIND_SOURCES)
     .filter(source => assignedSources.includes(source.id))
 
@@ -31,11 +41,11 @@ export const findOne = roomName => {
   }
 }
 
-export const findLeastAssigned = roomName => {
+export const findLeastAssigned = room => {
   // find least used
   // count creeps by sources
   // TODO - Memory.rooms doesn't seem to be a real thing.
-  const sources = Memory.rooms[roomName]
+  const sources = room
     .find(FIND_SOURCES)
     .reduce((acc, source) => {
       acc[source.id] = 0
@@ -43,7 +53,7 @@ export const findLeastAssigned = roomName => {
     }, {})
 
   Object.values(Memory.creeps)
-    .filter(getFilterByRoomName(roomName))
+    .filter(getFilterByRoomName(room.name))
     .forEach(creep => {
       sources[creep.memory.sourceId]++
     })
